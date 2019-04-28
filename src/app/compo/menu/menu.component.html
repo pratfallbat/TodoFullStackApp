@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-sm bg-dark">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/todos">Todos</a>
+    </li>
+    <li class="navbar-nav navbar-collapse justify-content-end">
+      <a *ngIf="!this.h.isUserLoggedIn();" routerLink="/login">Login</a>
+      <a *ngIf="this.h.isUserLoggedIn();" class="nav-link" routerLink="/logout">Logout</a>
+    </li>
+  </ul>
+
+</nav>
